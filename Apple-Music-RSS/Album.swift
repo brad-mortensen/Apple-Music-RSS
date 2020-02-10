@@ -9,16 +9,21 @@
 import Foundation
 
 struct AlbumResults:Decodable {
-    var results:Albums
+    var feed:Albums
 }
 
 struct Albums:Decodable {
-    var albums:[AlbumDetails]
+    var results:[AlbumDetails]
 }
 
 struct AlbumDetails:Decodable {
     var artistName:String
     var name:String
     var artworkUrl100:String
+    var genres:[GenreDetails]
+}
+
+struct GenreDetails:Decodable {
+    var name:String
 }
 

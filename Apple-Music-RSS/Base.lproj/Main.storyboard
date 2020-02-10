@@ -69,6 +69,7 @@
                                     <outlet property="album" destination="mb0-ek-Ryx" id="6Gm-wY-X5q"/>
                                     <outlet property="artist" destination="e3N-bF-3O8" id="JOt-rv-4GL"/>
                                     <outlet property="img" destination="9ev-cI-egc" id="hmD-Z3-nVC"/>
+                                    <segue destination="YqC-PP-vpv" kind="show" id="UNa-VZ-O4X"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -93,38 +94,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fbO-am-gP7">
-                                <rect key="frame" x="29" y="44" width="353" height="425"/>
+                                <rect key="frame" x="29" y="88" width="353" height="381"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oFO-dZ-d5S">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="425"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="381"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="381" id="qGm-Jd-xiN"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q32-Lh-wZk">
-                                <rect key="frame" x="29" y="594" width="353" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q32-Lh-wZk">
+                                <rect key="frame" x="29" y="536" width="353" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGl-UC-ZfK">
-                                <rect key="frame" x="29" y="654" width="353" height="26.5"/>
+                                <rect key="frame" x="29" y="602" width="353" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8l3-Wo-xRf">
+                                <rect key="frame" x="29" y="662" width="353" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="fbO-am-gP7" firstAttribute="trailing" secondItem="Q32-Lh-wZk" secondAttribute="trailing" id="17b-DA-wev"/>
-                            <constraint firstAttribute="bottom" secondItem="fbO-am-gP7" secondAttribute="bottom" constant="427" id="BD2-eE-CAs"/>
-                            <constraint firstItem="Q32-Lh-wZk" firstAttribute="trailing" secondItem="ZGl-UC-ZfK" secondAttribute="trailing" id="DxW-Y3-xoO"/>
-                            <constraint firstItem="AAy-RZ-Qn2" firstAttribute="trailing" secondItem="fbO-am-gP7" secondAttribute="trailing" constant="32" id="T4v-rW-W32"/>
-                            <constraint firstItem="fbO-am-gP7" firstAttribute="leading" secondItem="AAy-RZ-Qn2" secondAttribute="leading" constant="29" id="Y8S-XT-E1E"/>
-                            <constraint firstItem="fbO-am-gP7" firstAttribute="leading" secondItem="Q32-Lh-wZk" secondAttribute="leading" id="bu0-Xt-Nmd"/>
-                            <constraint firstItem="ZGl-UC-ZfK" firstAttribute="top" secondItem="Q32-Lh-wZk" secondAttribute="bottom" constant="28.5" id="lI2-nS-hpE"/>
-                            <constraint firstItem="fbO-am-gP7" firstAttribute="top" secondItem="AAy-RZ-Qn2" secondAttribute="top" id="nkZ-Yw-D3u"/>
-                            <constraint firstItem="AAy-RZ-Qn2" firstAttribute="bottom" secondItem="ZGl-UC-ZfK" secondAttribute="bottom" constant="181.5" id="wqv-Ry-411"/>
-                            <constraint firstItem="Q32-Lh-wZk" firstAttribute="leading" secondItem="ZGl-UC-ZfK" secondAttribute="leading" id="yyf-b0-rbJ"/>
+                            <constraint firstItem="ZGl-UC-ZfK" firstAttribute="top" secondItem="Q32-Lh-wZk" secondAttribute="bottom" constant="34.5" id="0aa-5X-lsQ"/>
+                            <constraint firstItem="Q32-Lh-wZk" firstAttribute="trailing" secondItem="fbO-am-gP7" secondAttribute="trailing" id="3Vx-y5-yz9"/>
+                            <constraint firstItem="8l3-Wo-xRf" firstAttribute="leading" secondItem="AAy-RZ-Qn2" secondAttribute="leading" constant="29" id="7Pp-pW-Wid"/>
+                            <constraint firstItem="8l3-Wo-xRf" firstAttribute="top" secondItem="ZGl-UC-ZfK" secondAttribute="bottom" constant="33.5" id="87p-3M-bWU"/>
+                            <constraint firstItem="8l3-Wo-xRf" firstAttribute="centerX" secondItem="cTl-oo-fFu" secondAttribute="centerX" constant="-1.5" id="Gqj-wX-pTm"/>
+                            <constraint firstItem="fbO-am-gP7" firstAttribute="leading" secondItem="AAy-RZ-Qn2" secondAttribute="leading" constant="29" id="L8k-Uz-jgZ"/>
+                            <constraint firstItem="Q32-Lh-wZk" firstAttribute="leading" secondItem="fbO-am-gP7" secondAttribute="leading" id="Ns4-Z3-Rdu"/>
+                            <constraint firstItem="Q32-Lh-wZk" firstAttribute="leading" secondItem="ZGl-UC-ZfK" secondAttribute="leading" id="Q86-Uk-OS3"/>
+                            <constraint firstItem="AAy-RZ-Qn2" firstAttribute="bottom" secondItem="ZGl-UC-ZfK" secondAttribute="bottom" constant="233.5" id="baA-ti-FpN"/>
+                            <constraint firstItem="Q32-Lh-wZk" firstAttribute="trailing" secondItem="ZGl-UC-ZfK" secondAttribute="trailing" id="cuB-yi-9xQ"/>
+                            <constraint firstItem="fbO-am-gP7" firstAttribute="top" secondItem="AAy-RZ-Qn2" secondAttribute="top" id="iqE-2J-wdk"/>
+                            <constraint firstItem="AAy-RZ-Qn2" firstAttribute="trailing" secondItem="fbO-am-gP7" secondAttribute="trailing" constant="32" id="v8i-Tt-Xrj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AAy-RZ-Qn2"/>
                     </view>
@@ -132,6 +144,7 @@
                     <connections>
                         <outlet property="album" destination="Q32-Lh-wZk" id="uf9-Ad-WqD"/>
                         <outlet property="artist" destination="ZGl-UC-ZfK" id="Eb3-dz-56T"/>
+                        <outlet property="genre" destination="8l3-Wo-xRf" id="bdN-po-Pcc"/>
                         <outlet property="img" destination="oFO-dZ-d5S" id="X9g-YS-rd9"/>
                     </connections>
                 </viewController>

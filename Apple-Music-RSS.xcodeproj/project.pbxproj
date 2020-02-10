@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		9D4BEBE823F0B77B000B505A /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4BEBE723F0B77B000B505A /* AlbumsViewController.swift */; };
 		9D4BEBEA23F0FF77000B505A /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4BEBE923F0FF77000B505A /* Album.swift */; };
 		9D4BEBEC23F1028B000B505A /* AlbumRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4BEBEB23F1028B000B505A /* AlbumRequest.swift */; };
+		9D4BEBEF23F1F347000B505A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4BEBEE23F1F347000B505A /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4BEBEF23F1F347000B505A /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +94,9 @@
 			dependencies = (
 			);
 			name = "Apple-Music-RSS";
+			packageProductDependencies = (
+				9D4BEBEE23F1F347000B505A /* SDWebImage */,
+			);
 			productName = "Apple-Music-RSS";
 			productReference = 9D4BEBD023F0B115000B505A /* Apple-Music-RSS.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 9D4BEBC723F0B115000B505A;
+			packageReferences = (
+				9D4BEBED23F1F347000B505A /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 9D4BEBD123F0B115000B505A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TY8YNF2MB2;
 				INFOPLIST_FILE = "Apple-Music-RSS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,7 +314,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bradmortensen.Apple-Music-RSS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -314,6 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TY8YNF2MB2;
 				INFOPLIST_FILE = "Apple-Music-RSS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -322,7 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bradmortensen.Apple-Music-RSS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -348,6 +358,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9D4BEBED23F1F347000B505A /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9D4BEBEE23F1F347000B505A /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D4BEBED23F1F347000B505A /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D4BEBC823F0B115000B505A /* Project object */;
 }

@@ -28,12 +28,10 @@ struct AlbumRequest {
                 completion(.failure(.noDataAvailable))
                 return
             }
-            print("JSON!!!: \(jsonData)")
             do {
                 let decoder = JSONDecoder()
                 let albumsResponse = try decoder.decode(AlbumResults.self, from: jsonData)
-                print("Album Res: \(albumsResponse)")
-                let albumDetails = albumsResponse.results.albums
+                let albumDetails = albumsResponse.feed.results
                 completion(.success(albumDetails))
             }catch{
                 completion(.failure(.canNotProcessData))

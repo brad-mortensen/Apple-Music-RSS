@@ -7,22 +7,26 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DetailsViewController: UIViewController {
     
+    @IBOutlet weak var img : UIImageView?
     @IBOutlet weak var album : UILabel?
     @IBOutlet weak var artist : UILabel?
-    @IBOutlet weak var img : UIImageView?
+    @IBOutlet weak var genre : UILabel?
     
-    var image = UIImage()
+    var image = ""
     var artistName = ""
     var albumTitle = ""
+    var albumGenre = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         album?.text = albumTitle
         artist?.text = artistName
-        img?.image = image
+        img?.sd_setImage(with: URL(string: image))
+        genre?.text = albumGenre
     }
 }
 
@@ -32,3 +36,17 @@ class AlbumCell: UITableViewCell {
     @IBOutlet weak var artist : UILabel?
     @IBOutlet weak var img : UIImageView?
 }
+
+//extension UIImageView {
+//    func load(url: URL) {
+//        DispatchQueue.global().async { [weak self] in
+//            if let data = try? Data(contentsOf: url) {
+//                if let image = UIImage(data:data){
+//                    DispatchQueue.main.async {
+//                        self?.image = image
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
