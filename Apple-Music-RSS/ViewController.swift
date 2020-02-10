@@ -8,13 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class DetailsViewController: UIViewController {
+    
+    @IBOutlet weak var album : UILabel?
+    @IBOutlet weak var artist : UILabel?
+    @IBOutlet weak var img : UIImageView?
+    
+    var image = UIImage()
+    var artistName = ""
+    var albumTitle = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        album?.text = albumTitle
+        artist?.text = artistName
+        img?.image = image
     }
-
-
 }
 
+
+class AlbumCell: UITableViewCell {
+    @IBOutlet weak var album : UILabel?
+    @IBOutlet weak var artist : UILabel?
+    @IBOutlet weak var img : UIImageView?
+}

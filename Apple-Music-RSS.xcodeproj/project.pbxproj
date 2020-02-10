@@ -13,6 +13,9 @@
 		9D4BEBDB23F0B115000B505A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4BEBD923F0B115000B505A /* Main.storyboard */; };
 		9D4BEBDD23F0B117000B505A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4BEBDC23F0B117000B505A /* Assets.xcassets */; };
 		9D4BEBE023F0B117000B505A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4BEBDE23F0B117000B505A /* LaunchScreen.storyboard */; };
+		9D4BEBE823F0B77B000B505A /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4BEBE723F0B77B000B505A /* AlbumsViewController.swift */; };
+		9D4BEBEA23F0FF77000B505A /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4BEBE923F0FF77000B505A /* Album.swift */; };
+		9D4BEBEC23F1028B000B505A /* AlbumRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4BEBEB23F1028B000B505A /* AlbumRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		9D4BEBDC23F0B117000B505A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D4BEBDF23F0B117000B505A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D4BEBE123F0B117000B505A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D4BEBE723F0B77B000B505A /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		9D4BEBE923F0FF77000B505A /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		9D4BEBEB23F1028B000B505A /* AlbumRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +65,13 @@
 				9D4BEBD323F0B115000B505A /* AppDelegate.swift */,
 				9D4BEBD523F0B115000B505A /* SceneDelegate.swift */,
 				9D4BEBD723F0B115000B505A /* ViewController.swift */,
+				9D4BEBE723F0B77B000B505A /* AlbumsViewController.swift */,
 				9D4BEBD923F0B115000B505A /* Main.storyboard */,
 				9D4BEBDC23F0B117000B505A /* Assets.xcassets */,
 				9D4BEBDE23F0B117000B505A /* LaunchScreen.storyboard */,
 				9D4BEBE123F0B117000B505A /* Info.plist */,
+				9D4BEBE923F0FF77000B505A /* Album.swift */,
+				9D4BEBEB23F1028B000B505A /* AlbumRequest.swift */,
 			);
 			path = "Apple-Music-RSS";
 			sourceTree = "<group>";
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4BEBE823F0B77B000B505A /* AlbumsViewController.swift in Sources */,
 				9D4BEBD823F0B115000B505A /* ViewController.swift in Sources */,
 				9D4BEBD423F0B115000B505A /* AppDelegate.swift in Sources */,
+				9D4BEBEC23F1028B000B505A /* AlbumRequest.swift in Sources */,
 				9D4BEBD623F0B115000B505A /* SceneDelegate.swift in Sources */,
+				9D4BEBEA23F0FF77000B505A /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
