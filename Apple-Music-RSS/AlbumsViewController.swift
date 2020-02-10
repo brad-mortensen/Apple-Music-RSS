@@ -10,10 +10,23 @@ import UIKit
 
 
 class AlbumsViewController: UITableViewController {
+    
     let myData = [["albumTitle": "Milky Way", "artist":"Bas", "img": "tester"],["albumTitle": "What A Time to Be Alive", "artist":"Drake and Future", "img": ""]]
+    
+    var albumArr = [AlbumDetails]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let albumRequest = AlbumRequest(quantity: "25")
+        albumRequest.getAlbums { [weak self] result in
+            switch result {
+            case .failure (let error):
+                print(error)
+            case .success(let albums):
+                self?.albumArr = albums
+            }
+        }
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath) as! AlbumCell
