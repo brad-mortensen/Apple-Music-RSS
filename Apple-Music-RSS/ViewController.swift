@@ -16,7 +16,11 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var artist : UILabel?
     @IBOutlet weak var genre : UILabel?
     
-    var image = ""
+    var image = "" {
+        didSet {
+            image = String(image[..<image.index(image.endIndex, offsetBy: -13)]) + "400x400bb.png"
+        }
+    }
     var artistName = ""
     var albumTitle = ""
     var albumGenre = ""
